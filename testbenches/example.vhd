@@ -6,10 +6,10 @@ use ieee.std_logic_unsigned.all;
 entity project_tb is
 end project_tb;
 
-architecture projecttb of project_tb is
+architecture bhv of project_tb is
 constant c_CLOCK_PERIOD		: time := 100 ns;
 signal   tb_done		: std_logic;
-signal   mem_address		: std_logic_vector (15 downto 0) := (others => 0');
+signal   mem_address		: std_logic_vector (15 downto 0) := (others => '0');
 signal   tb_rst	                : std_logic := '0';
 signal   tb_start		: std_logic := '0';
 signal   tb_clk		        : std_logic := '0';
@@ -113,4 +113,4 @@ begin
     assert false report "Simulation Ended!, TEST PASSATO" severity failure;
 end process test;
 
-end projecttb; 
+end bhv; 
